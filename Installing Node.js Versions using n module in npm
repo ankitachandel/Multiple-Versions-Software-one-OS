@@ -1,0 +1,47 @@
+n is supported on macOS, Linux, including with Windows Subsystem for Linux, and various other unix-like systems. It is written as a BASH script but does not require you to use BASH as your command shell.
+
+
+Setp 1:  firsly install nodejs on operating system 
+    Node.js installation worked, so we can now focus our attention on npm, which was included in the install:
+     # which npm
+       /usr/bin/npm
+     # npm --version
+         6.13.7
+    Install npm Updates
+       #npm install -g npm@latest
+       
+    If you already have Node.js installed, an easy way to install n is using npm:
+         #npm install -g n
+    
+    If npm is not yet available, one way to bootstrap an install:
+        curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n bash n lts
+      # Now node and npm are available
+          npm install -g n
+     Alternatively, you can clone this repo and
+          make install
+Third Party Installers
+  On macOS with Homebrew you can install the n formula.
+   #brew install n
+  Or on macOS with MacPorts you can install the n port:
+   #port install n
+  On Linux and macOS, n-install allows installation directly from GitHub; for instance:
+   #curl -L https://git.io/n-install | bash
+   
+Step 2 : 
+     Installing Node.js Versions
+     Simply execute n <version> to download and install a version of Node.js. If <version> has already been downloaded, n will install from its cache.
+      #n 10.16.0
+      #n lts
+      
+commands :
+
+    Removing Versions
+        Remove some cached versions:
+        # n rm 0.9.4 v0.10.0
+        
+    Removing all cached versions except the installed version:
+         #n prune
+     show the path to the downloaded node version:
+         # n which 6.14.3
+         
+    
