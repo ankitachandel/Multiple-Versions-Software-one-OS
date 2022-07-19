@@ -1,0 +1,31 @@
+# Prerequisites
+To complete this tutorial, you will need the following:
+The latest version of Node installed on your machine.
+
+Step 1 — Getting Started
+To get started, you will need to install the Node Version Manager, or nvm, on your system using curl or wget.
+    #curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+                                        or
+    #wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+Step 2 -
+   add this line on linux ~/.basrcsh
+   add this line on mac  /etc/zshrc
+   export NVM_DIR="$HOME/.nvm"
+   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+Step 3 — Installing Multiple Node.js Versions
+         Now that you have nvm installed, you can install a few different versions of Node.js:
+          #nvm install 0.10
+          
+        You can also install Node version 8 and version 12:
+        #nvm install 8
+        #nvm install 12
+Step 4 — Listing Installed Node.js Versions
+         With a handful of different versions of Node.js installed, we can run nvm with the ls argument to list out everything we have installed:
+         #nvm ls
+Step 5 — Setting a Default Node.js Version
+         #nvm alias default 10.15
+Step 6 — Switching Node.js Versions
+         #nvm use 0.10
+step 7 -- delete nodejs version 
+          nvm uninstall 0.10
