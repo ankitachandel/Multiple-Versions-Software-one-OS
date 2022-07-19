@@ -1,0 +1,74 @@
+Need  fvm
+     Flutter 1.2.0 has been released and I have updated it, but some libraries didn’t work with them. So I had to keep both version: Stable and 1.17.4.It takes time to do an upgrade and downgrade every time. Then, I found a “fvm” to solve this situation
+FVM
+   Flutter Version Management, A simple CLI to manage Flutter SDK versions per project.
+Step 1: Install Dart
+    
+    Install Dart on macOs with the following Command
+          #brew tap dart-lang/dart
+          #brew install dart
+          #brew install dart@2.12   (To switch between locally installed Dart releases, first install the version you want to switch to if you haven’t. For example, to install Dart 2.12:)
+          # brew info dart   (To see which versions of Dart you’ve installed)
+      Uninstall
+          #brew uninstall fvm
+          #brew untap leoafarias/fvm
+      FVM to manage your global Flutter install we recommend installing as a standalone.
+          #dart pub global activate fvm
+     
+     Install Dart on LINUX with the following Command
+          Perform the following one-time setup:
+          #sudo apt-get update
+          #sudo apt-get install apt-transport-https
+          #wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/dart.gpg
+          #echo 'deb [signed-by=/usr/share/keyrings/dart.gpg arch=amd64] https://storage.googleapis.com/download.dartlang.org/linux/debian stable main' | sudo tee /etc/apt/sources.list.d/dart_stable.list
+       Then install the Dart SDK:
+          #sudo apt-get update
+          #sudo apt-get install dart
+         After installing the SDK, add its bin directory to your PATH. For example, use the following command to change PATH in your active terminal session:
+          #export PATH="$PATH:/usr/lib/dart/bin"
+         To change the PATH for future terminal sessions, use a command like this:
+           #echo 'export PATH="$PATH:/usr/lib/dart/bin"' >> ~/.profile
+        
+      Install Dart on WINDOW with the following Command
+          Press Windows+R to open the Run window.
+          Type cmd into the box. 
+          Press Ctrl+Shift+Enter.
+          To install the Dart SDK:
+            >choco install dart-sdk
+            To upgrade the Dart SDK:
+            >choco upgrade dart-sdk
+          If you can’t use the Dart SDK executables, add the SDK location to your PATH:
+
+      In the Windows search box, type env.
+      Click Edit the system environment variables.
+      Click Environment Variables….
+      In the user variable section, select Path and click Edit…. 
+     Click New, and enter the path to the dart-sdk directory.
+      In each window that you just opened, click Apply or OK to dismiss it and apply the path change.
+      
+      #run the following command to install fvm
+          dart pub global activate fvm
+       #run the following command to uninstall fvm
+           dart pub global deactivate fvm
+       #Also delete the fvm cache directory if you want to remove all the cached files and folders. The cache directory could be known by using the command fvm list
+      
+      
+ commands
+  >fvm releases   : List the available flutter versions
+  >fvm install 2.0.6  :install flutter version 2.0.6 
+  >fvm remove <version> : to remove specified flutter version
+  >fvm global <version> : to set the global flutter version
+  >fvm global beta      :  change the current global version to beta from stable.
+  >fvm global stable   : use the stable version that we've just installed globally inside all of your projects
+  >fvm use <version>  : to set the flutter version ProjectWise
+  >fvm doctor   : to display the current fvm version and its configuration
+  >fvm use
+   _  .fvm Folder
+      SDK Folder: This is the actual library of flutter for this particular version
+      fvm_config.json: The fvm_config file says what particular version of flutter we are using for this project
+  >> fvm flutter : run flutter build
+  
+  
+  Fllowing this link
+     https://fvm.app/
+      
